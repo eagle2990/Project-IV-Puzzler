@@ -32,7 +32,7 @@ public class lightUp : MonoBehaviour {
 	}
 	public void playerSelection() {
 		gameLogic.GetComponent<GameLogic>().playerSelection(this.gameObject);
-		this.GetComponent<GvrAudioSource>().Play();
+		this.GetComponent<AudioSource>().Play();
 	}
 	public void aestheticReset() {
 		this.GetComponent<MeshRenderer>().material = defaultMaterial; //Revert to the default material
@@ -42,7 +42,7 @@ public class lightUp : MonoBehaviour {
 	public void patternLightUp() { //Lightup behavior when the pattern shows.
 		this.GetComponent<MeshRenderer>().material = lightUpMaterial; //Assign the hover material
 		//this.GetComponentInChildren<ParticleSystem>().enableEmission = true; //Turn on particle emmission
-		this.GetComponent<GvrAudioSource> ().Play (); //Play the audio attached
+		this.GetComponent<AudioSource> ().Play (); //Play the audio attached
 	}
 
 

@@ -148,7 +148,7 @@ public class GameLogic : MonoBehaviour
     public void puzzleFailure()
     { //Do this when the player gets it wrong
         Debug.Log("You've Failed, Resetting puzzle");
-        failAudioHolder.GetComponent<GvrAudioSource>().Play();
+        failAudioHolder.GetComponent<AudioSource>().Play();
         currentSolveIndex = 0;
 
         startPuzzle();
@@ -157,7 +157,7 @@ public class GameLogic : MonoBehaviour
 
     public void puzzleSuccess()
     { //Do this when the player gets it right
-        successAudioHolder.GetComponent<GvrAudioSource>().Play();
+        failAudioHolder.GetComponent<AudioSource>().Play();
         iTween.MoveTo(player,
             iTween.Hash(
                 "position", restartPoint.transform.position,
